@@ -1,35 +1,27 @@
 <template>
 	<view class="recommend bg-color">
-		<view class="recommend-item">
-			<image class="item-big" src="@/static/img/Children.jpg" mode=""></image>
+		<view class="recommend-item" v-for="(item,index) in dataList" :key=index>
+			<image class="item-big" :src="item.bigUrl" mode=""></image>
 			<view class="item-center">
 				<view><i class="iconfont icon-daifahuo"></i>多库发货</view>
 				<view><i class="iconfont icon-kefuyouxian"></i>破损包赔</view>
 				<view><i class="iconfont icon-tianmaoshunfengbaoyou"></i>顺丰冷链</view>
 			</view>
 			<view class="item-small">
-				<image class="item-img" src="@/static/img/Children1.jpg" mode=""></image>
-				<image class="item-img" src="@/static/img/Children2.jpg" mode=""></image>
-				<image  class="item-img"src="@/static/img/Children3.jpg" mode=""></image>
+				<block v-for="(k,i) in item.data" :key="i">
+					<image class="item-img" :src="k.imgUrl" mode=""></image>
+				</block>
 			</view>
 		</view>
-		<view class="recommend-item">
-			<image class="item-big" src="@/static/img/Furnishing.jpg" mode=""></image>	
-			<view class="item-center">
-				<view><i class="iconfont icon-daifahuo"></i>多库发货</view>
-				<view><i class="iconfont icon-kefuyouxian"></i>破损包赔</view>
-				<view><i class="iconfont icon-tianmaoshunfengbaoyou"></i>顺丰冷链</view>
-			</view>
-			<view class="item-small">
-				<image class="item-img" src="@/static/img/Furnishing1.jpg" mode=""></image>
-				<image class="item-img" src="@/static/img/Furnishing2.jpg" mode=""></image>
-				<image  class="item-img"src="@/static/img/Furnishing3.jpg" mode=""></image>
-			</view>
 		</view>
-	</view>
 </template>
 
 <script>
+	export default{
+		props:{
+			dataList:Array
+		}
+	}
 </script>
 
 <style>

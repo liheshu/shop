@@ -312,18 +312,85 @@ var render = function () {
             { key: item, attrs: { _i: "5-" + $31 } },
             [
               _c(
-                "uni-view",
+                "v-uni-scroll-view",
                 {
-                  staticClass: _vm._$g("6-" + $31, "sc"),
-                  attrs: { _i: "6-" + $31 },
+                  style: _vm._$g("6-" + $31, "s"),
+                  attrs: { "scroll-y": "true", _i: "6-" + $31 },
                 },
                 [
-                  _c("indexSwiper", { attrs: { _i: "7-" + $31 } }),
-                  _c("Recommend", { attrs: { _i: "8-" + $31 } }),
-                  _c("Card", { attrs: { _i: "9-" + $31 } }),
-                  _c("CommodityList", { attrs: { _i: "10-" + $31 } }),
+                  _vm._$g("7-" + $31, "i")
+                    ? [
+                        _vm._l(
+                          _vm._$g(8 + "-" + $31, "f"),
+                          function (k, i, $22, $32) {
+                            return [
+                              _vm._$g("9-" + $31 + "-" + $32, "i")
+                                ? _c("indexSwiper", {
+                                    key: k["k0"],
+                                    attrs: { _i: "9-" + $31 + "-" + $32 },
+                                  })
+                                : _vm._e(),
+                              _vm._$g("10-" + $31 + "-" + $32, "i")
+                                ? [
+                                    _c("Recommend", {
+                                      attrs: { _i: "11-" + $31 + "-" + $32 },
+                                    }),
+                                    _c("Card", {
+                                      attrs: { _i: "12-" + $31 + "-" + $32 },
+                                    }),
+                                  ]
+                                : _vm._e(),
+                              _vm._$g("13-" + $31 + "-" + $32, "i")
+                                ? _c("Banner", {
+                                    key: k["k2"],
+                                    attrs: { _i: "13-" + $31 + "-" + $32 },
+                                  })
+                                : _vm._e(),
+                              _vm._$g("14-" + $31 + "-" + $32, "i")
+                                ? [
+                                    _c("Card", {
+                                      attrs: { _i: "15-" + $31 + "-" + $32 },
+                                    }),
+                                    _c("Icons", {
+                                      attrs: { _i: "16-" + $31 + "-" + $32 },
+                                    }),
+                                  ]
+                                : _vm._e(),
+                              _vm._$g("17-" + $31 + "-" + $32, "i")
+                                ? [
+                                    _c("Hots", {
+                                      attrs: { _i: "18-" + $31 + "-" + $32 },
+                                    }),
+                                    _c("Card", {
+                                      attrs: { _i: "19-" + $31 + "-" + $32 },
+                                    }),
+                                  ]
+                                : _vm._e(),
+                              _vm._$g("20-" + $31 + "-" + $32, "i")
+                                ? [
+                                    _c("Shop", {
+                                      attrs: { _i: "21-" + $31 + "-" + $32 },
+                                    }),
+                                    _c("Card", {
+                                      attrs: { _i: "22-" + $31 + "-" + $32 },
+                                    }),
+                                  ]
+                                : _vm._e(),
+                              _vm._$g("23-" + $31 + "-" + $32, "i")
+                                ? _c("CommodityList", {
+                                    key: k["k6"],
+                                    attrs: { _i: "23-" + $31 + "-" + $32 },
+                                  })
+                                : _vm._e(),
+                            ]
+                          }
+                        ),
+                      ]
+                    : _c("uni-view", { attrs: { _i: "24-" + $31 } }, [
+                        _vm._v("暂无数据......"),
+                      ]),
                 ],
-                1
+                2
               ),
             ],
             1
@@ -505,62 +572,33 @@ var render = function () {
         _i: 0,
       },
     },
-    [
-      _c(
+    _vm._l(_vm._$g(1, "f"), function (item, index, $20, $30) {
+      return _c(
         "v-uni-swiper-item",
-        { attrs: { _i: 1 } },
+        { key: item, attrs: { _i: "1-" + $30 } },
         [
           _c(
             "uni-view",
-            { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
+            {
+              staticClass: _vm._$g("2-" + $30, "sc"),
+              attrs: { _i: "2-" + $30 },
+            },
             [
               _c("v-uni-image", {
-                staticClass: _vm._$g(3, "sc"),
-                attrs: { src: _vm._$g(3, "a-src"), mode: "", _i: 3 },
+                staticClass: _vm._$g("3-" + $30, "sc"),
+                attrs: {
+                  src: _vm._$g("3-" + $30, "a-src"),
+                  mode: "",
+                  _i: "3-" + $30,
+                },
               }),
             ],
             1
           ),
         ],
         1
-      ),
-      _c(
-        "v-uni-swiper-item",
-        { attrs: { _i: 4 } },
-        [
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
-            [
-              _c("v-uni-image", {
-                staticClass: _vm._$g(6, "sc"),
-                attrs: { src: _vm._$g(6, "a-src"), mode: "", _i: 6 },
-              }),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-      _c(
-        "v-uni-swiper-item",
-        { attrs: { _i: 7 } },
-        [
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(8, "sc"), attrs: { _i: 8 } },
-            [
-              _c("v-uni-image", {
-                staticClass: _vm._$g(9, "sc"),
-                attrs: { src: _vm._$g(9, "a-src"), mode: "", _i: 9 },
-              }),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-    ],
+      )
+    }),
     1
   )
 }
@@ -601,6 +639,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
+  props: ["dataList"],
   data: function data() {
     return {
       wxsProps: {}
@@ -1286,90 +1325,37 @@ var render = function () {
   return _c(
     "uni-view",
     { staticClass: _vm._$g(0, "sc"), attrs: { _i: 0 } },
-    [
-      _c(
+    _vm._l(_vm._$g(1, "f"), function (item, index, $20, $30) {
+      return _c(
         "uni-view",
-        { staticClass: _vm._$g(1, "sc"), attrs: { _i: 1 } },
+        {
+          key: item,
+          staticClass: _vm._$g("1-" + $30, "sc"),
+          attrs: { _i: "1-" + $30 },
+        },
         [
           _c("v-uni-image", {
-            staticClass: _vm._$g(2, "sc"),
-            attrs: { src: "/static/img/Children.jpg", mode: "", _i: 2 },
+            staticClass: _vm._$g("2-" + $30, "sc"),
+            attrs: {
+              src: _vm._$g("2-" + $30, "a-src"),
+              mode: "",
+              _i: "2-" + $30,
+            },
           }),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
+            {
+              staticClass: _vm._$g("3-" + $30, "sc"),
+              attrs: { _i: "3-" + $30 },
+            },
             [
               _c(
                 "uni-view",
-                { attrs: { _i: 4 } },
-                [
-                  _c("i", { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } }),
-                  _vm._v("多库发货"),
-                ],
-                1
-              ),
-              _c(
-                "uni-view",
-                { attrs: { _i: 6 } },
-                [
-                  _c("i", { staticClass: _vm._$g(7, "sc"), attrs: { _i: 7 } }),
-                  _vm._v("破损包赔"),
-                ],
-                1
-              ),
-              _c(
-                "uni-view",
-                { attrs: { _i: 8 } },
-                [
-                  _c("i", { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } }),
-                  _vm._v("顺丰冷链"),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
-            [
-              _c("v-uni-image", {
-                staticClass: _vm._$g(11, "sc"),
-                attrs: { src: "/static/img/Children1.jpg", mode: "", _i: 11 },
-              }),
-              _c("v-uni-image", {
-                staticClass: _vm._$g(12, "sc"),
-                attrs: { src: "/static/img/Children2.jpg", mode: "", _i: 12 },
-              }),
-              _c("v-uni-image", {
-                staticClass: _vm._$g(13, "sc"),
-                attrs: { src: "/static/img/Children3.jpg", mode: "", _i: 13 },
-              }),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-      _c(
-        "uni-view",
-        { staticClass: _vm._$g(14, "sc"), attrs: { _i: 14 } },
-        [
-          _c("v-uni-image", {
-            staticClass: _vm._$g(15, "sc"),
-            attrs: { src: "/static/img/Furnishing.jpg", mode: "", _i: 15 },
-          }),
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
-            [
-              _c(
-                "uni-view",
-                { attrs: { _i: 17 } },
+                { attrs: { _i: "4-" + $30 } },
                 [
                   _c("i", {
-                    staticClass: _vm._$g(18, "sc"),
-                    attrs: { _i: 18 },
+                    staticClass: _vm._$g("5-" + $30, "sc"),
+                    attrs: { _i: "5-" + $30 },
                   }),
                   _vm._v("多库发货"),
                 ],
@@ -1377,11 +1363,11 @@ var render = function () {
               ),
               _c(
                 "uni-view",
-                { attrs: { _i: 19 } },
+                { attrs: { _i: "6-" + $30 } },
                 [
                   _c("i", {
-                    staticClass: _vm._$g(20, "sc"),
-                    attrs: { _i: 20 },
+                    staticClass: _vm._$g("7-" + $30, "sc"),
+                    attrs: { _i: "7-" + $30 },
                   }),
                   _vm._v("破损包赔"),
                 ],
@@ -1389,11 +1375,11 @@ var render = function () {
               ),
               _c(
                 "uni-view",
-                { attrs: { _i: 21 } },
+                { attrs: { _i: "8-" + $30 } },
                 [
                   _c("i", {
-                    staticClass: _vm._$g(22, "sc"),
-                    attrs: { _i: 22 },
+                    staticClass: _vm._$g("9-" + $30, "sc"),
+                    attrs: { _i: "9-" + $30 },
                   }),
                   _vm._v("顺丰冷链"),
                 ],
@@ -1404,27 +1390,31 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(23, "sc"), attrs: { _i: 23 } },
+            {
+              staticClass: _vm._$g("10-" + $30, "sc"),
+              attrs: { _i: "10-" + $30 },
+            },
             [
-              _c("v-uni-image", {
-                staticClass: _vm._$g(24, "sc"),
-                attrs: { src: "/static/img/Furnishing1.jpg", mode: "", _i: 24 },
-              }),
-              _c("v-uni-image", {
-                staticClass: _vm._$g(25, "sc"),
-                attrs: { src: "/static/img/Furnishing2.jpg", mode: "", _i: 25 },
-              }),
-              _c("v-uni-image", {
-                staticClass: _vm._$g(26, "sc"),
-                attrs: { src: "/static/img/Furnishing3.jpg", mode: "", _i: 26 },
+              _vm._l(_vm._$g(11 + "-" + $30, "f"), function (k, i, $21, $31) {
+                return [
+                  _c("v-uni-image", {
+                    key: k["k0"],
+                    staticClass: _vm._$g("12-" + $30 + "-" + $31, "sc"),
+                    attrs: {
+                      src: _vm._$g("12-" + $30 + "-" + $31, "a-src"),
+                      mode: "",
+                      _i: "12-" + $30 + "-" + $31,
+                    },
+                  }),
+                ]
               }),
             ],
-            1
+            2
           ),
         ],
         1
-      ),
-    ],
+      )
+    }),
     1
   )
 }
@@ -1465,6 +1455,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
+  props: ["dataList"],
   data: function data() {
     return {
       wxsProps: {}
@@ -1844,6 +1835,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _Commodity = _interopRequireDefault(__webpack_require__(/*! ./Commodity.vue */ 41));
 var _default = {
+  props: ["dataList"],
   data: function data() {
     return {
       wxsProps: {}
@@ -2243,7 +2235,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
-  props: ["imgUrl"],
+  props: ["dataList"],
   data: function data() {
     return {
       wxsProps: {}
@@ -2389,136 +2381,35 @@ var render = function () {
   return _c(
     "uni-view",
     { staticClass: _vm._$g(0, "sc"), attrs: { _i: 0 } },
-    [
-      _c(
+    _vm._l(_vm._$g(1, "f"), function (item, index, $20, $30) {
+      return _c(
         "uni-view",
-        { staticClass: _vm._$g(1, "sc"), attrs: { _i: 1 } },
+        {
+          key: item,
+          staticClass: _vm._$g("1-" + $30, "sc"),
+          attrs: { _i: "1-" + $30 },
+        },
         [
           _c("v-uni-image", {
-            staticClass: _vm._$g(2, "sc"),
-            attrs: { src: _vm._$g(2, "a-src"), mode: "", _i: 2 },
+            staticClass: _vm._$g("2-" + $30, "sc"),
+            attrs: {
+              src: _vm._$g("2-" + $30, "a-src"),
+              mode: "",
+              _i: "2-" + $30,
+            },
           }),
           _c(
             "v-uni-text",
-            { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
-            [_vm._v("蔬菜")]
+            {
+              staticClass: _vm._$g("3-" + $30, "sc"),
+              attrs: { _i: "3-" + $30 },
+            },
+            [_vm._v(_vm._$g("3-" + $30, "t0-0"))]
           ),
         ],
         1
-      ),
-      _c(
-        "uni-view",
-        { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
-        [
-          _c("v-uni-image", {
-            staticClass: _vm._$g(5, "sc"),
-            attrs: { src: _vm._$g(5, "a-src"), mode: "", _i: 5 },
-          }),
-          _c(
-            "v-uni-text",
-            { staticClass: _vm._$g(6, "sc"), attrs: { _i: 6 } },
-            [_vm._v("粮油")]
-          ),
-        ],
-        1
-      ),
-      _c(
-        "uni-view",
-        { staticClass: _vm._$g(7, "sc"), attrs: { _i: 7 } },
-        [
-          _c("v-uni-image", {
-            staticClass: _vm._$g(8, "sc"),
-            attrs: { src: _vm._$g(8, "a-src"), mode: "", _i: 8 },
-          }),
-          _c(
-            "v-uni-text",
-            { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } },
-            [_vm._v("水果")]
-          ),
-        ],
-        1
-      ),
-      _c(
-        "uni-view",
-        { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
-        [
-          _c("v-uni-image", {
-            staticClass: _vm._$g(11, "sc"),
-            attrs: { src: _vm._$g(11, "a-src"), mode: "", _i: 11 },
-          }),
-          _c(
-            "v-uni-text",
-            { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } },
-            [_vm._v("肉类")]
-          ),
-        ],
-        1
-      ),
-      _c(
-        "uni-view",
-        { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
-        [
-          _c("v-uni-image", {
-            staticClass: _vm._$g(14, "sc"),
-            attrs: { src: _vm._$g(14, "a-src"), mode: "", _i: 14 },
-          }),
-          _c(
-            "v-uni-text",
-            { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } },
-            [_vm._v("酒类")]
-          ),
-        ],
-        1
-      ),
-      _c(
-        "uni-view",
-        { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
-        [
-          _c("v-uni-image", {
-            staticClass: _vm._$g(17, "sc"),
-            attrs: { src: _vm._$g(17, "a-src"), mode: "", _i: 17 },
-          }),
-          _c(
-            "v-uni-text",
-            { staticClass: _vm._$g(18, "sc"), attrs: { _i: 18 } },
-            [_vm._v("冻品")]
-          ),
-        ],
-        1
-      ),
-      _c(
-        "uni-view",
-        { staticClass: _vm._$g(19, "sc"), attrs: { _i: 19 } },
-        [
-          _c("v-uni-image", {
-            staticClass: _vm._$g(20, "sc"),
-            attrs: { src: _vm._$g(20, "a-src"), mode: "", _i: 20 },
-          }),
-          _c(
-            "v-uni-text",
-            { staticClass: _vm._$g(21, "sc"), attrs: { _i: 21 } },
-            [_vm._v("零食")]
-          ),
-        ],
-        1
-      ),
-      _c(
-        "uni-view",
-        { staticClass: _vm._$g(22, "sc"), attrs: { _i: 22 } },
-        [
-          _c("v-uni-image", {
-            staticClass: _vm._$g(23, "sc"),
-            attrs: { src: _vm._$g(23, "a-src"), mode: "", _i: 23 },
-          }),
-          _c(
-            "v-uni-text",
-            { staticClass: _vm._$g(24, "sc"), attrs: { _i: 24 } },
-            [_vm._v("乳制品")]
-          ),
-        ],
-        1
-      ),
-    ],
+      )
+    }),
     1
   )
 }
@@ -2559,6 +2450,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
+  props: ["dataList"],
   data: function data() {
     return {
       wxsProps: {}
@@ -2745,6 +2637,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _Commodity = _interopRequireDefault(__webpack_require__(/*! ../common/Commodity.vue */ 41));
 var _default = {
+  props: ["dataList"],
   data: function data() {
     return {
       wxsProps: {}
@@ -2839,18 +2732,29 @@ var render = function () {
   return _c(
     "uni-view",
     { staticClass: _vm._$g(0, "sc"), attrs: { _i: 0 } },
-    [
-      _c(
+    _vm._l(_vm._$g(1, "f"), function (item, index, $20, $30) {
+      return _c(
         "uni-view",
-        { staticClass: _vm._$g(1, "sc"), attrs: { _i: 1 } },
+        {
+          key: item,
+          staticClass: _vm._$g("1-" + $30, "sc"),
+          attrs: { _i: "1-" + $30 },
+        },
         [
           _c(
             "uni-view",
-            { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
+            {
+              staticClass: _vm._$g("2-" + $30, "sc"),
+              attrs: { _i: "2-" + $30 },
+            },
             [
               _c("v-uni-image", {
-                staticClass: _vm._$g(3, "sc"),
-                attrs: { src: _vm._$g(3, "a-src"), mode: "", _i: 3 },
+                staticClass: _vm._$g("3-" + $30, "sc"),
+                attrs: {
+                  src: _vm._$g("3-" + $30, "a-src"),
+                  mode: "",
+                  _i: "3-" + $30,
+                },
               }),
             ],
             1
@@ -2858,14 +2762,17 @@ var render = function () {
           _c(
             "v-uni-scroll-view",
             {
-              staticClass: _vm._$g(4, "sc"),
-              attrs: { "scroll-x": "true", _i: 4 },
+              staticClass: _vm._$g("4-" + $30, "sc"),
+              attrs: { "scroll-x": "true", _i: "4-" + $30 },
             },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
-                [_c("Commodity", { attrs: { _i: 6 } })],
+                {
+                  staticClass: _vm._$g("5-" + $30, "sc"),
+                  attrs: { _i: "5-" + $30 },
+                },
+                [_c("Commodity", { attrs: { _i: "6-" + $30 } })],
                 1
               ),
             ],
@@ -2873,8 +2780,8 @@ var render = function () {
           ),
         ],
         1
-      ),
-    ],
+      )
+    }),
     1
   )
 }
@@ -2917,6 +2824,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _Commodity = _interopRequireDefault(__webpack_require__(/*! ../common/Commodity.vue */ 41));
 var _default = {
+  props: ["dataList"],
   data: function data() {
     return {
       wxsProps: {}
@@ -3029,7 +2937,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../soft/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n/* .wx-nav{\r\n\theight: 200rpx;\r\n\twidth: 100%;\r\n\tline-height: 200rpx;\r\n\ttext-align: center;\r\n\tdisplay: flex;\r\n\tjustify-content: space-between;\r\n\talign-items: center;\r\n} */\n.scroll-content[data-v-2be84a3c]{\r\n\twidth: 100%;\r\n\theight:80rpx;\r\n\twhite-space: nowrap;\n}\n.scroll-item[data-v-2be84a3c]{\r\n\tdisplay: inline-block;\r\n\tpadding: 10rpx 30rpx;\r\n\tfont-size: 32rpx;\n}\n.f-active-color[data-v-2be84a3c]{\r\n\tpadding: 10rpx 0;\r\n\tborder-bottom: 6rpx solid #49BDFB;\n}\r\n", ""]);
+exports.push([module.i, "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n/* .wx-nav{\r\n\theight: 200rpx;\r\n\twidth: 100%;\r\n\tline-height: 200rpx;\r\n\ttext-align: center;\r\n\tdisplay: flex;\r\n\tjustify-content: space-between;\r\n\talign-items: center;\r\n} */\n.scroll-content[data-v-2be84a3c]{\r\n\twidth: 100%;\r\n\theight:80rpx;\r\n\twhite-space: nowrap;\n}\n.scroll-item[data-v-2be84a3c]{\r\n\tdisplay: inline-block;\r\n\tpadding: 10rpx 30rpx;\r\n\tfont-size: 32rpx;\n}\n.f-active-color[data-v-2be84a3c]{\r\n\tpadding: 10rpx 0;\r\n\tborder-bottom: 6rpx solid #49BDFB;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

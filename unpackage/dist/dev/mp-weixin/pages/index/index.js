@@ -102,6 +102,22 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var l0 = _vm.__map(_vm.newTopBar, function (item, index) {
+    var $orig = _vm.__get_orig(item)
+    var g0 = item.data.length
+    return {
+      $orig: $orig,
+      g0: g0,
+    }
+  })
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -137,10 +153,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
 var indexSwiper = function indexSwiper() {
   __webpack_require__.e(/*! require.ensure | components/index/IndexSwiper */ "components/index/IndexSwiper").then((function () {
     return resolve(__webpack_require__(/*! @/components/index/IndexSwiper.vue */ 59));
@@ -191,21 +209,9 @@ var _default = {
       // 内容块高度值
       clentHeight: 0,
       // 顶栏数据
-      topBar: [{
-        name: '推荐'
-      }, {
-        name: '生鲜优选'
-      }, {
-        name: '新鲜肉类'
-      }, {
-        name: '零食特卖'
-      }, {
-        name: '上线新品'
-      }, {
-        name: '临期特卖'
-      }, {
-        name: '扶贫专区'
-      }]
+      topBar: [],
+      // 承载数组
+      newTopBar: []
     };
   },
   components: {
@@ -218,24 +224,108 @@ var _default = {
     Hots: Hots,
     Shop: Shop
   },
-  onLoad: function onLoad() {},
+  onLoad: function onLoad() {
+    // uni.request({
+    // 	url:'http://192.168.137.1:3000/api/index_list/data',
+    // 	success:(res)=>{
+    // 		console.log(res.data.data);
+    // 	}
+    // })
+    // 封装
+    this.__init();
+  },
   onReady: function onReady() {
     var _this = this;
-    var view = uni.createSelectorQuery().select('.home-data');
-    view.boundingClientRect(function (data) {
-      _this.clentHeight = data.height;
-    }).exec();
+    // let view=uni.createSelectorQuery().select('.home-data');
+    // view.boundingClientRect(data=>{
+    // 	// this.clentHeight=data.height;
+    // 	this.clentHeight=1800;
+    // }).exec()
+    this.getClientHeight(),
+    // 获取可视区域高度
+    uni.getSystemInfo({
+      success: function success(res) {
+        _this.clentHeight = res.windowHeight - uni.upx2px(80) - _this.getClientHeight();
+      }
+    });
   },
   methods: {
+    // 请求首页数据
+    __init: function __init() {
+      var _this2 = this;
+      uni.request({
+        url: 'http://192.168.0.106:3000/api/index_list/data',
+        success: function success(res) {
+          // console.log(res.data.data);
+          var data = res.data.data;
+          _this2.topBar = data.topBar;
+          _this2.newTopBar = _this2.initData(data);
+          // console.log(this.initData(data));
+        }
+      });
+    },
+    // 添加数据
+    initData: function initData(res) {
+      var arr = [];
+      // console.log(this.topBar.length);
+      for (var i = 0; i < this.topBar.length; i++) {
+        var obj = {
+          data: [],
+          load: "first"
+        };
+        // 首次获取数据
+        if (i == 0) {
+          obj.data = res.data;
+        }
+        arr.push(obj);
+      }
+      return arr;
+    },
+    // 点击顶栏
     changeTop: function changeTop(index) {
       if (this.topBarIndex == index) {
         return;
       }
       this.topBarIndex = index;
       this.scrollIntoIndex = 'top' + index;
+      if (this.newTopBar[this.topBarIndex].load === 'first') {
+        this.addData();
+      }
     },
+    // 滑动
     onChangeTab: function onChangeTab(e) {
       this.changeTop(e.detail.current);
+    },
+    // 兼容可视区域高度【兼容】
+    getClientHeight: function getClientHeight() {
+      var res = uni.getSystemInfoSync();
+      console.log(res.platform, res.statusBarHeight);
+      var system = res.platform;
+      if (system === 'ios') {
+        return 0 + res.statusBarHeight;
+      } else if (system === 'android') {
+        return -40 + res.statusBarHeight;
+      } else {
+        return 0;
+      }
+    },
+    // 对应显示不同数据
+    addData: function addData() {
+      var _this3 = this;
+      // 拿到索引
+      var index = this.topBarIndex;
+      // 拿到id
+      var id = this.topBar[index].id;
+      // 请求数据
+      uni.request({
+        url: "http://192.168.0.106:3000/api/index_list/".concat(id, "/data/1"),
+        success: function success(res) {
+          var data = res.data.data;
+          _this3.newTopBar[index].data = [].concat((0, _toConsumableArray2.default)(_this3.newTopBar[index].data), (0, _toConsumableArray2.default)(data));
+        }
+      });
+      // 请求结束后重新赋值
+      this.newTopBar[this.topBarIndex].load = 'last';
     }
   }
 };

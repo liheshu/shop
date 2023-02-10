@@ -1,14 +1,14 @@
 <template>
 	<view class="banner">
-		<image class="banner-img" :src="imgUrl" mode=""></image>
+		<image class="banner-img" :src="dataList" mode=""></image>
 	</view>
 </template>
 
 <script>
 	export default{
-		props:{
-			imgUrl:String
-		}
+	props:{
+		dataList:String
+	}
 	}
 </script>
 
