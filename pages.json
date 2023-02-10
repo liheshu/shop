@@ -1,0 +1,96 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "提篮",
+				"navigationBarBackgroundColor": "#fff",
+				// "navigationStyle": "custom",
+				"app-plus": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						"buttons": [
+							{
+								"float": "left",
+								"fontSrc": "./static/iconfont.ttf",
+								"text": "\ue623"
+							},	
+							{
+								"float": "right",
+								"fontSrc": "./static/iconfont.ttf",
+								"text": "\ue600"
+							}
+						]
+					}
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/list/list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "列表",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/shopcart/shopcart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#636263",
+		"selectedColor": "#636263",
+		"backgroundColor": "",
+		"spacing": "3px",
+		"list": [
+			{
+			"pagePath":"pages/index/index",
+			"text":"首页",
+			"iconPath": "static/tabbar/index.png",
+			"selectedIconPath": "static/tabbar/indexSelected.png"
+			},
+			{
+			"pagePath":"pages/list/list",
+			"iconPath": "static/tabbar/list.png",
+			"selectedIconPath": "static/tabbar/listSelected.png",
+			"text":"列表"
+			},
+			{
+			"pagePath":"pages/shopcart/shopcart",
+			"iconPath": "static/tabbar/shop.png",
+			"selectedIconPath": "static/tabbar/shopSelected.png",
+			"text":"购物车"
+			},
+			{
+			"pagePath":"pages/my/my",
+			"iconPath": "static/tabbar/my.png",
+			"selectedIconPath": "static/tabbar/mySelected.png",
+			"text":"我的"
+			}
+			
+		]
+	}	
+}

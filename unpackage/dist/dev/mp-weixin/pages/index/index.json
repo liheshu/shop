@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "提篮",
+  "navigationBarBackgroundColor": "#fff",
+  "usingComponents": {
+    "index-swiper": "/components/index/IndexSwiper",
+    "recommend": "/components/index/Recommend",
+    "card": "/components/common/Cart",
+    "commodity-list": "/components/common/CommodityList",
+    "banner": "/components/index/Banner",
+    "icons": "/components/index/Icons",
+    "hots": "/components/index/Hots",
+    "shop": "/components/index/Shop"
+  }
+}

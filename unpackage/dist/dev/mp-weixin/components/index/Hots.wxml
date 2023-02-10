@@ -1,0 +1,1 @@
+<view class="hot"><commodity vue-id="30e5bdc8-1" dataList="{{hotList}}" itemsW="250rpx" bigH="220rpx" bind:__l="__l"></commodity></view>
